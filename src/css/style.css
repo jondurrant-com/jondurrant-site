@@ -1,8 +1,8 @@
 :root {
-  --bg: #fafafa;
-  --text: #1a1a1a;
-  --muted: #555;
-  --accent: #0b5fff;
+  --bg: #08080b;
+  --text: #e9eef6;
+  --muted: #9ea4ad;
+  --accent: #c1121f; /* imperial red */
   --max-width: 980px;
 }
 
@@ -19,10 +19,27 @@ body {
   line-height: 1.6;
 }
 
+/* subtle starfield */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.9) 0, transparent 50%),
+    radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.6) 0, transparent 50%),
+    radial-gradient(1px 1px at 70% 30%, rgba(255,255,255,0.5) 0, transparent 50%),
+    radial-gradient(1px 1px at 85% 80%, rgba(255,255,255,0.35) 0, transparent 50%);
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .wrapper {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 3.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
@@ -47,6 +64,19 @@ h1 {
   font-size: 2.5rem;
   margin: 0 0 0.75rem;
   line-height: 1.05;
+}
+
+.hero-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.emblem {
+  width: 48px;
+  height: 48px;
+  display: block;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.6));
 }
 
 p {
@@ -160,4 +190,14 @@ footer a {
   .wrapper {
     padding: 5rem 2rem;
   }
+}
+
+/* Adjustments for Empire theme colors */
+.skills li a,
+.links a {
+  color: var(--text);
+}
+.links .hero-image img {
+  background: #0d0d10;
+  border: 1px solid rgba(255,255,255,0.04);
 }
