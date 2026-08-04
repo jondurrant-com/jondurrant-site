@@ -1,10 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
   <rect width="200" height="200" rx="24" fill="#0B0B0D"/>
-  <circle cx="100" cy="100" r="68" fill="#c1121f" opacity="0.08"/>
-  <g transform="translate(40,40)" fill="#c1121f">
-    <rect x="30" y="0" width="20" height="80" rx="4"/>
-    <rect x="10" y="20" width="60" height="20" rx="4"/>
-    <rect x="30" y="60" width="20" height="40" rx="4"/>
+  <!-- outer ring -->
+  <circle cx="100" cy="100" r="78" stroke="#c1121f" stroke-width="6" opacity="0.9" fill="none"/>
+  <!-- segmented inner ring -->
+  <g stroke="#c1121f" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <path d="M36 100a64 64 0 0 1 128 0" fill="none"/>
+    <path d="M54 64a64 64 0 0 1 92 0" fill="none" opacity="0.6"/>
+    <path d="M64 36a64 64 0 0 1 72 0" fill="none" opacity="0.4"/>
   </g>
-  <circle cx="100" cy="100" r="46" stroke="#c1121f" stroke-width="6"/>
+  <!-- radial spokes (six) -->
+  <g transform="translate(100,100)" fill="#c1121f" opacity="0.96">
+    <g>
+      <rect x="-6" y="-72" width="12" height="36" rx="3"/>
+      <rect x="-6" y="36" width="12" height="36" rx="3"/>
+    </g>
+    <g transform="rotate(60)">
+      <rect x="-6" y="-72" width="12" height="36" rx="3"/>
+      <rect x="-6" y="36" width="12" height="36" rx="3"/>
+    </g>
+    <g transform="rotate(120)">
+      <rect x="-6" y="-72" width="12" height="36" rx="3"/>
+      <rect x="-6" y="36" width="12" height="36" rx="3"/>
+    </g>
+  </g>
+  <!-- center core -->
+  <circle cx="100" cy="100" r="28" fill="#c1121f" opacity="0.14"/>
+  <circle cx="100" cy="100" r="14" fill="#c1121f"/>
 </svg>
