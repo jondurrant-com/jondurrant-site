@@ -1,0 +1,12 @@
+{
+  "name": "jondurrant-com",
+  "version": "1.0.0",
+  "description": "Personal homepage for jondurrant.com",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

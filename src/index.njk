@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: Jon Durrant
+description: Personal homepage of Jon Durrant
+---
+<main class="wrapper hero">
+  <div class="hero-content">
+    <section class="hero-copy">
+      <p class="eyebrow">Engineer, founder, and maker</p>
+      <h1>Jon Durrant</h1>
+
+      <p>
+        Brighton, UK–based engineer building robots, embedded systems, and
+        hands-on training for curious builders.
+      </p>
+
+      <p>
+        I share practical guides, YouTube projects, and online courses under
+        my DrJonEA identity.
+      </p>
+
+      <a class="cta" href="https://drjonea.com">Explore DrJonEA &rarr;</a>
+
+      <ul class="skills">
+        <li>Robotics & embedded systems</li>
+        <li>Maker projects and tutorials</li>
+        <li>Online learning and training</li>
+      </ul>
+
+      <ul class="links">
+        <li><a href="https://drjonea.co.uk">DrJonEA homepage</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLspDyukWAtRUPNdlktaOdk7os9TfTEFh1">IT strategy playlist</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLspDyukWAtRXKIi0RSCURdKyStcsZtpfl">Star Wars droids playlist</a></li>
+      </ul>
+    </section>
+
+    <figure class="hero-image">
+      <img src="/img/jon-durrant.jpg" alt="Dr Jon Durrant">
+      <figcaption>Engineering, robotics, and maker.</figcaption>
+    </figure>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Jon Durrant</p>
+  </footer>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
