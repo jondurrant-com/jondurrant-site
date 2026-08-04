@@ -65,6 +65,30 @@ p {
   color: var(--muted);
 }
 
+/* Links grid for droid thumbnails */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.links li {
+  margin: 0;
+}
+
+.links a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.links .hero-image {
+  margin: 0;
+}
+
 .hero-image img {
   width: 100%;
   display: block;
@@ -108,5 +132,8 @@ footer a {
   .hero-content {
     grid-template-columns: minmax(0, 1fr) 280px;
     gap: 3rem;
+  }
+  .links {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
