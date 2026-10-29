@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so "git Last Modified" dates are real
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -29,9 +31,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Debug - list src files
-        run: find src -type f
 
       - name: Build site
         run: npm run build

@@ -1,88 +1,184 @@
 ---
 layout: base.njk
-title: Jon Durrant
-description: Personal homepage of Jon Durrant
+title: "Dr Jon Durrant – Embedded Systems, Robotics & Pico | Dr Jon EA"
+socialTitle: "Dr Jon Durrant – engineer, maker and educator"
+description: "Brighton engineer behind Dr Jon EA: Raspberry Pi Pico and RP2350 tutorials, droid builds, Udemy courses and talks, backed by 25+ years of IT architecture."
+schema: schema-person.njk
+date: git Last Modified
 ---
-<main class="wrapper">
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Jon Durrant, home">
+      <img src="/img/jd-mark.svg" alt="" width="36" height="36">
+      <span>Jon Durrant</span>
+    </a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrapper">
   <section class="section hero">
     <div class="hero-content container">
-      <section class="hero-copy">
-        <div class="hero-head">
-          <img class="emblem" src="/img/empire-emblem.svg" alt="Emblem">
-          <p class="eyebrow">Engineer, founder, and maker</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Engineer · Maker · Educator</p>
+        <h1>Dr Jon Durrant</h1>
+        <p class="lead">
+          I build robots and embedded systems on the Raspberry Pi Pico and RP2350,
+          and teach others to do the same as <strong>Dr Jon EA</strong>, from Brighton, UK.
+        </p>
+        <p>
+          Before that I spent over 25 years in software engineering and IT architecture.
+          Now I share practical guides on <a href="{{ site.profiles.youtube }}">YouTube</a>,
+          write them up on <a href="{{ site.profiles.blog }}">the blog</a>, publish the code on
+          <a href="{{ site.profiles.github }}">GitHub</a> and teach courses on
+          <a href="{{ site.profiles.udemy }}">Udemy</a>.
+        </p>
+        <div class="cta-row">
+          <a class="cta" href="{{ site.profiles.youtube }}">Watch on YouTube</a>
+          <a class="cta cta-secondary" href="{{ site.profiles.blog }}">Read the Dr Jon EA blog</a>
         </div>
-        <h1>Jon Durrant</h1>
+      </div>
+      <figure class="portrait">
+        <img src="/img/jon-durrant.webp" alt="Portrait of Dr Jon Durrant" width="219" height="219">
+      </figure>
+    </div>
+  </section>
 
-        <p>
-          Brighton, UK–based engineer building robots, embedded systems, and
-          hands-on training for curious builders.
-        </p>
-
-        <p>
-          I share practical guides, <a href="https://youtube.com/@drjonea">YouTube</a>
-          projects, and online courses under my DrJonEA identity.
-        </p>
-
-        <a class="cta" href="https://drjonea.co.uk">Explore DrJonEA &rarr;</a>
-
-        <ul class="skills">
-          <li><a href="https://youtube.com/@drjonea">Robotics & embedded systems</a></li>
-          <li><a href="https://youtube.com/@drjonea">Maker projects and tutorials</a></li>
-          <li><a href="https://drjonea.co.uk/training/">Online learning and training</a></li>
+  <section class="section" id="about" aria-labelledby="about-h">
+    <div class="container">
+      <h2 id="about-h">About</h2>
+      <div class="two-col">
+        <div>
+          <p>
+            I got my first computer, a Dragon 32, at ten and never really stopped. After a BSc in computer
+            science and a PhD in object-oriented methods for distributed systems, both at the
+            University of Brighton, I started out writing embedded C, then moved into solution and enterprise architecture.
+          </p>
+          <p>
+            That took me through Nortel Networks, TUI, Sainsbury's, Sony Interactive Entertainment
+            (PlayStation), where I was Senior Director of Architecture, and Legal &amp; General.
+            In 2021 I set up Dr Jon EA Ltd to go back to building things with my hands and to teach.
+          </p>
+          <p>
+            My videos and courses cover the Pico and RP2350, FreeRTOS, IoT with MQTT and HTTP,
+            ROS 2 and micro-ROS, displays, PCB design and 3D printing, mostly through projects
+            you can build yourself.
+          </p>
+        </div>
+        <ul class="facts" aria-label="At a glance">
+          <li><span>Focus</span>Raspberry Pi Pico, RP2350, FreeRTOS, IoT, robotics</li>
+          <li><span>Background</span>25+ years in software and enterprise architecture</li>
+          <li><span>Teaching</span>YouTube since 2022, Udemy courses on the Pico and IT leadership</li>
+          <li><span>Code</span><a href="{{ site.profiles.github }}">jondurrant</a> and <a href="{{ site.profiles.githubOrg }}">DrJonEA</a> on GitHub</li>
+          <li><span>Based in</span>Brighton, UK</li>
         </ul>
-      </section>
-
-      <aside>
-        <figure class="hero-image">
-          <img src="/img/jon-durrant.jpg" alt="Dr Jon Durrant">
-          <figcaption>Engineering, robotics, and maker.</figcaption>
-        </figure>
-      </aside>
+      </div>
     </div>
   </section>
 
-  <section class="section about">
+  <section class="section" id="projects" aria-labelledby="projects-h">
     <div class="container">
-      <h2>About</h2>
-      <p>
-        I combine years of IT leadership and architecture with hands-on maker
-        work to teach and build practical robotics and embedded projects.
-      </p>
-    </div>
-  </section>
-
-  <section class="section projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <p>My Star Wars inspired friends:</p>
-      <ul class="links">
-        <li>
-          <a href="https://www.youtube.com/playlist?list=PLspDyukWAtRUPNdlktaOdk7os9TfTEFh1">
-            <figure class="hero-image">
-              <img src="/img/ReXP1.jpg" alt="ReXP1">
-              <figcaption>ReXP1</figcaption>
-            </figure>
+      <h2 id="projects-h">Projects</h2>
+      <p class="section-intro">Droids, sensors and the odd spooky build. Each one is a video series with open source code.</p>
+      <ul class="cards">
+        {%- for p in home.projects %}
+        <li class="card">
+          <a href="{{ p.href }}">
+            <img src="{{ p.img }}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async" style="object-position: {{ p.position }}">
+            <div class="card-body">
+              <h3>{{ p.name }} <small>{{ p.years }}</small></h3>
+              <p>{{ p.blurb }}</p>
+              <span class="more">{{ p.cta }} →</span>
+            </div>
           </a>
         </li>
-        <li>
-          <a href="https://www.youtube.com/playlist?list=PLspDyukWAtRXKIi0RSCURdKyStcsZtpfl">
-            <figure class="hero-image">
-              <img src="/img/BpiBO.jpg" alt="BpiBO">
-              <figcaption>BpiBO</figcaption>
-            </figure>
-          </a>
-        </li>
+        {%- endfor %}
       </ul>
     </div>
   </section>
 
-  <footer class="section">
+  <section class="section" id="guides" aria-labelledby="guides-h">
     <div class="container">
-      <p>&copy; <span id="year"></span> Jon Durrant</p>
+      <h2 id="guides-h">Popular guides</h2>
+      <p class="section-intro">The videos people come back to most.</p>
+      <ul class="cards cards-small">
+        {%- for g in home.guides %}
+        <li class="card">
+          <a href="{{ g.href }}">
+            <img src="{{ g.img }}" alt="" width="320" height="180" loading="lazy" decoding="async">
+            <div class="card-body"><h3>{{ g.title }}</h3></div>
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+      <p><a class="more" href="{{ site.profiles.youtube }}/videos">All videos on YouTube →</a></p>
     </div>
-  </footer>
+  </section>
+
+  <section class="section" id="courses" aria-labelledby="courses-h">
+    <div class="container">
+      <h2 id="courses-h">Courses</h2>
+      <div class="two-col">
+        <div>
+          <h3 class="col-title">Embedded development</h3>
+          <ul class="course-list">
+            {%- for c in home.courses.embedded %}
+            <li><a href="{{ c.href }}">{{ c.title }}</a><span>{{ c.pitch }}</span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3 class="col-title">IT leadership</h3>
+          <ul class="course-list">
+            {%- for c in home.courses.leadership %}
+            <li><a href="{{ c.href }}">{{ c.title }}</a><span>{{ c.pitch }}</span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+      <p><a class="more" href="{{ site.profiles.udemy }}">All courses on Udemy →</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="talks" aria-labelledby="talks-h">
+    <div class="container">
+      <h2 id="talks-h">Talks and events</h2>
+      <ul class="events">
+        {%- for e in home.events %}
+        <li>
+          <time datetime="{{ e.date }}">{{ e.label }}</time>
+          <div><strong>{{ e.event }}</strong> <span class="role">{{ e.role }}</span><br>{{ e.what }}</div>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="container">
+      <h2 id="contact-h">Contact</h2>
+      <p>For sponsorships, partnerships, talks or consulting, email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+      <ul class="social">
+        <li><a href="{{ site.profiles.youtube }}">YouTube</a></li>
+        <li><a href="{{ site.profiles.blog }}">Blog</a></li>
+        <li><a href="{{ site.profiles.udemy }}">Udemy</a></li>
+        <li><a href="{{ site.profiles.linkedin }}">LinkedIn</a></li>
+        <li><a href="{{ site.profiles.github }}">GitHub</a></li>
+      </ul>
+    </div>
+  </section>
 </main>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; {{ site.year }} Jon Durrant · <a href="https://drjonea.co.uk">Dr Jon EA Ltd</a></p>
+  </div>
+</footer>

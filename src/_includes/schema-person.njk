@@ -1,0 +1,41 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "Jon Durrant",
+      "honorificPrefix": "Dr",
+      "alternateName": ["Dr Jon Durrant", "Dr Jon EA", "DrJonEA"],
+      "url": "{{ site.url }}/",
+      "image": "{{ site.url }}/img/jon-durrant.webp",
+      "jobTitle": "{{ site.jobTitle }}",
+      "description": "Brighton-based embedded systems engineer, maker and educator. Founder of Dr Jon EA Ltd, publishing Raspberry Pi Pico and RP2350 tutorials, droid builds and Udemy courses.",
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Brighton", "sameAs": "https://www.brighton.ac.uk" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Brighton", "addressCountry": "GB" },
+      "worksFor": { "@id": "{{ site.url }}/#org" },
+      "knowsAbout": ["Raspberry Pi Pico", "RP2350", "RP2040", "Embedded systems", "FreeRTOS", "IoT", "MQTT", "ROS 2", "micro-ROS", "Robotics", "Enterprise architecture", "IT strategy", "Data strategy"],
+      "sameAs": [
+        {%- for key, href in site.profiles %}"{{ href }}"{% if not loop.last %}, {% endif %}{% endfor -%}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#org",
+      "name": "Dr Jon EA Ltd",
+      "url": "https://drjonea.co.uk",
+      "founder": { "@id": "{{ site.url }}/#person" },
+      "sameAs": ["{{ site.profiles.youtube }}", "{{ site.profiles.githubOrg }}"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "{{ site.name }}",
+      "inLanguage": "en-GB",
+      "publisher": { "@id": "{{ site.url }}/#person" }
+    }
+  ]
+}
+</script>

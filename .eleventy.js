@@ -3,12 +3,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy({ "src/favicon": "/" });
 
   return {
     dir: {
       input: "src",
       output: "_site",
-      includes: "_includes"
+      includes: "_includes",
+      data: "_data"
     }
   };
 };
